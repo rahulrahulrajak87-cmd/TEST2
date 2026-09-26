@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #0d1b2a;
+  --bg-card: #1b263b;
+  --neon-green: #00e676;
+  --gold: #00b4d8;
+  --gold-light: #caf0f8;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d1b2a;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.glass-panel {
+  background: #1b263b;
+  border: 1px solid rgba(0, 180, 216, 0.15);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #00b4d8, #caf0f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color: #ffffff;
+  font-weight: bold;
+  transition: all 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.2);
+}
+
+.btn-primary:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 10px rgba(0, 180, 216, 0.1);
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.card-action-bar {
+  background: linear-gradient(90deg, #00b4d8, #caf0f8);
+  color: #0d1b2a;
+}
+
+.notice-icon-bg {
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.2) 0%, rgba(27, 38, 59, 0) 70%);
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 35px solid #ff3b30;
+  z-index: 20;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.6));
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+.hide-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "SR MILKS - Premium Dairy Wealth",
+  "description": "High-performance dairy wealth and investment platform with real-time portfolio tracking, multi-tier referral tree, cached queries, and optimized Firestore database.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
